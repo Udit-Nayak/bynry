@@ -1,11 +1,5 @@
 # Part 1 – Code Review & Bug Analysis
 
-## First Impressions
-
-Honestly, the code isn't terrible for a first pass — it gets the basic idea right. But there are several things I'd flag before letting this anywhere near production. Some are obvious bugs, some are subtle but serious. I'll go through them one by one.
-
----
-
 ## Issues Found
 
 ### 1. No input validation whatsoever

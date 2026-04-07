@@ -20,17 +20,6 @@ stockflow/
     └── NOTES.md            # Assumptions, edge cases, what I'd add next
 ```
 
-## Assumptions log
-
-A few things were ambiguous in the spec and I had to make calls. I've documented them in each part's file, but here's the summary:
-
-- **SKU uniqueness is per-company**, not global. Two different companies can reuse the same SKU string.
-- **"Recent sales activity"** means at least one sale in the last 30 days.
-- **Bundles** don't carry their own stock — their components do. Alerts fire on components.
-- **Suppliers are global** (shared across companies). I'd confirm this before shipping.
-- **`days_until_stockout`** is a simple linear projection based on 30-day average velocity. Returns `null` when it can't be computed rather than showing a misleading number.
-- Part 3 uses the schema from Part 2. If the actual DB differs, the query would need adjusting.
-
 ## How to run Part 3
 
 ```bash
