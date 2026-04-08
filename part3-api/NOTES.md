@@ -1,23 +1,5 @@
 # Part 3 – Notes & Assumptions
 
-## How to run it
-
-```bash
-cd part3-api
-cp .env.example .env   # fill in your DB credentials
-npm install
-npm run dev            # or npm start for production
-```
-
-The endpoint will be live at:
-```
-GET http://localhost:3000/api/companies/:company_id/alerts/low-stock
-```
-
-You'll need an `Authorization` header (the middleware currently just checks it's present — swap in real JWT verification before going live).
-
----
-
 ## The main decisions I made
 
 **What counts as "recent sales activity"?**
